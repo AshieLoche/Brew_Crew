@@ -28,18 +28,18 @@ class _SignInState extends State<SignIn> {
           child: const Text('Sign in Anon'),
           onPressed: () async {
 
-            // dynamic result = await _auth.signInAnon();
-            //
-            // if (result == null) {
-            //   if (kDebugMode) {
-            //     print('Error signing in');
-            //   }
-            // } else {
-            //   if (kDebugMode) {
-            //     print('Signed in');
-            //     print(result);
-            //   }
-            // }
+            dynamic result = await _auth.signInAnon();
+
+            if (result == null) {
+              if (kDebugMode) {
+                print('Error signing in');
+              }
+            } else {
+              if (kDebugMode) {
+                print('Signed in');
+                print(result.uid);
+              }
+            }
 
           },
         ),
